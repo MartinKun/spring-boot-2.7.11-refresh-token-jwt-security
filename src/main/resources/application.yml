@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/auth
-    username: ${DB-USERNAME}
-    password: ${DB-PASSWORD}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -18,8 +18,8 @@ spring:
 
 jwt:
   access:
-    secret: ${ACCESS-SECRET}
-    expiration: ${ACCESS-EXPIRATION}
+    secret: ${ACCESS_SECRET}
+    expiration: ${ACCESS_EXPIRATION}
   refresh:
-    secret: ${REFRESH-SECRET}
-    expiration: ${REFRESH-EXPIRATION}
+    secret: ${REFRESH_SECRET}
+    expiration: ${REFRESH_EXPIRATION}
