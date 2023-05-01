@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth
+    username: ${DB-USERNAME}
+    password: ${DB-PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+
+jwt:
+  access:
+    secret: ${ACCESS-SECRET}
+    expiration: ${ACCESS-EXPIRATION}
+  refresh:
+    secret: ${REFRESH-SECRET}
+    expiration: ${REFRESH-EXPIRATION}
